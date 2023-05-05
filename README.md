@@ -8,4 +8,4 @@
 + [*Greedy*](https://github.com/kimchanho97/algorithm/tree/main/Greedy)
 + [*PrefixSum*](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
 + [*Trie*](https://github.com/kimchanho97/algorithm/tree/main/Trie)
-+ [*Unionfind*](https://github.com/kimchanho97/algorithm/tree/main/Unionfind)
++ [*UnionFind*](https://github.com/kimchanho97/algorithm/tree/main/UnionFind)
