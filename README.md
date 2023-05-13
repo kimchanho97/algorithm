@@ -12,5 +12,4 @@
 + [*Trie*](https://github.com/kimchanho97/algorithm/tree/main/Trie)
 + [*UnionFind*](https://github.com/kimchanho97/algorithm/tree/main/UnionFind)
 
-https://github.com/kimchanho97/algorithm/assets/104095041/d3581956-6d1c-4956-8ce8-bd05548bdf8a
 
