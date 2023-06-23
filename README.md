@@ -1,15 +1,14 @@
-# *Algorithm*
+# _Algorithm_
 
-+ [*BackTracking*](https://github.com/kimchanho97/algorithm/tree/main/BackTracking)
-+ [*BinarySearch*](https://github.com/kimchanho97/algorithm/tree/main/BinarySearch)
-+ [*DFS*](https://github.com/kimchanho97/algorithm/tree/main/DFS)
-+ [*Dijkstra*](https://github.com/kimchanho97/algorithm/tree/main/Dijkstra)
-+ [*DynamicProgramming*](https://github.com/kimchanho97/algorithm/tree/main/DynamicProgramming)
-+ [*Greedy*](https://github.com/kimchanho97/algorithm/tree/main/Greedy)
-+ [*Imos*](https://github.com/kimchanho97/algorithm/tree/main/Imos)
-+ [*PrefixSum*](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
-+ [*SegmentTree*](https://github.com/kimchanho97/algorithm/tree/main/SegmentTree)
-+ [*Trie*](https://github.com/kimchanho97/algorithm/tree/main/Trie)
-+ [*UnionFind*](https://github.com/kimchanho97/algorithm/tree/main/UnionFind)
-
-
+- [_BFS_](https://github.com/kimchanho97/algorithm/tree/main/BFS)
+- [_BackTracking_](https://github.com/kimchanho97/algorithm/tree/main/BackTracking)
+- [_BinarySearch_](https://github.com/kimchanho97/algorithm/tree/main/BinarySearch)
+- [_DFS_](https://github.com/kimchanho97/algorithm/tree/main/DFS)
+- [_Dijkstra_](https://github.com/kimchanho97/algorithm/tree/main/Dijkstra)
+- [_DynamicProgramming_](https://github.com/kimchanho97/algorithm/tree/main/DynamicProgramming)
+- [_Greedy_](https://github.com/kimchanho97/algorithm/tree/main/Greedy)
+- [_Imos_](https://github.com/kimchanho97/algorithm/tree/main/Imos)
+- [_PrefixSum_](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
+- [_SegmentTree_](https://github.com/kimchanho97/algorithm/tree/main/SegmentTree)
+- [_Trie_](https://github.com/kimchanho97/algorithm/tree/main/Trie)
+- [_UnionFind_](https://github.com/kimchanho97/algorithm/tree/main/UnionFind)
