@@ -7,6 +7,7 @@
 - [_DFS_](https://github.com/kimchanho97/algorithm/tree/main/DFS)
 - [_Dijkstra_](https://github.com/kimchanho97/algorithm/tree/main/Dijkstra)
 - [_DynamicProgramming_](https://github.com/kimchanho97/algorithm/tree/main/DynamicProgramming)
+- [_ExponentiationBySquaring_](https://github.com/kimchanho97/algorithm/tree/main/ExponentiationBySquaring)
 - [_Greedy_](https://github.com/kimchanho97/algorithm/tree/main/Greedy)
 - [_Imos_](https://github.com/kimchanho97/algorithm/tree/main/Imos)
 - [_PrefixSum_](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
