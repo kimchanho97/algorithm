@@ -15,5 +15,6 @@
 - [_PrefixSum_](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
 - [_PriorityQueue_](https://github.com/kimchanho97/algorithm/tree/main/PriorityQueue)
 - [_SegmentTree_](https://github.com/kimchanho97/algorithm/tree/main/SegmentTree)
+- [_Stack_](https://github.com/kimchanho97/algorithm/tree/main/Stack)
 - [_Trie_](https://github.com/kimchanho97/algorithm/tree/main/Trie)
 - [_UnionFind_](https://github.com/kimchanho97/algorithm/tree/main/UnionFind)
