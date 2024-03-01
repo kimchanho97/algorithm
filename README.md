@@ -12,6 +12,7 @@
 - [_FloydWarshall_](https://github.com/kimchanho97/algorithm/tree/main/FloydWarshall)
 - [_Greedy_](https://github.com/kimchanho97/algorithm/tree/main/Greedy)
 - [_Imos_](https://github.com/kimchanho97/algorithm/tree/main/Imos)
+- [_MeetInTheMiddle_](https://github.com/kimchanho97/algorithm/tree/main/MeetInTheMiddle)
 - [_PrefixSum_](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
 - [_PriorityQueue_](https://github.com/kimchanho97/algorithm/tree/main/PriorityQueue)
 - [_SegmentTree_](https://github.com/kimchanho97/algorithm/tree/main/SegmentTree)
