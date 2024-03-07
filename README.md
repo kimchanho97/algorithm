@@ -14,6 +14,7 @@
 - [_Imos_](https://github.com/kimchanho97/algorithm/tree/main/Imos)
 - [_LIS_](https://github.com/kimchanho97/algorithm/tree/main/LIS)
 - [_MeetInTheMiddle_](https://github.com/kimchanho97/algorithm/tree/main/MeetInTheMiddle)
+- [_MinimumSpanningTree_](https://github.com/kimchanho97/algorithm/tree/main/MinimumSpanningTree)
 - [_PrefixSum_](https://github.com/kimchanho97/algorithm/tree/main/PrefixSum)
 - [_PriorityQueue_](https://github.com/kimchanho97/algorithm/tree/main/PriorityQueue)
 - [_SegmentTree_](https://github.com/kimchanho97/algorithm/tree/main/SegmentTree)
