@@ -4,6 +4,7 @@
 - [_BackTracking_](https://github.com/kimchanho97/algorithm/tree/main/BackTracking)
 - [_BellmanFord_](https://github.com/kimchanho97/algorithm/tree/main/BellmanFord)
 - [_BinarySearch_](https://github.com/kimchanho97/algorithm/tree/main/BinarySearch)
+- [_BitMasking_](https://github.com/kimchanho97/algorithm/tree/main/BitMasking)
 - [_DFS_](https://github.com/kimchanho97/algorithm/tree/main/DFS)
 - [_Dijkstra_](https://github.com/kimchanho97/algorithm/tree/main/Dijkstra)
 - [_DynamicProgramming_](https://github.com/kimchanho97/algorithm/tree/main/DynamicProgramming)
