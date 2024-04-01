@@ -152,3 +152,87 @@ for k in range(i, j)]) + (psum[j] - psum[i - 1])` 의 점화식을 가진다.
     ```
 
 <br>
+
+## [골드4]RGB거리 2(http://www.acmicpc.net/problem/17404)
+
+- 문제: 각각의 집을 빨강, 초록, 파랑으로 칠하는 비용이 주어졌을 때, 아래 규칙을 만족하면서 모든 집을 칠하는 비용의 최솟값을 구해보자.
+
+  - 연속된 색상으로 집을 칠할 수 없다.
+  - 1번 집과 N번 집의 색상은 같으면 안 된다.
+
+* 알고리즘: `DP`
+
+* 해설:
+
+  - 탑다운
+
+    ```python
+    dp = [[[-1] * 3 for i in range(3)] for j in range(n)]
+
+    def dfs(row, col, start):
+        # dp[row][col][start]: row, col을 포함하며, 시작점이 start일때, 남은 경로를 완성하는 최소비용
+        if row == n - 1:
+            if col == start:
+                dp[row][col][start] = float('inf')
+            else:
+                dp[row][col][start] = cost[row][col]
+            return dp[row][col][start]
+
+        if dp[row][col][start] != -1:
+            return dp[row][col][start]
+
+        temp = float('inf')
+        for i in range(3):
+            if col == i:
+                continue
+            temp = min(temp, cost[row][col] + dfs(row + 1, i, start))
+        dp[row][col][start] = temp
+        return dp[row][col][start]
+
+    result = [dfs(0, 0, 0), dfs(0, 1, 1), dfs(0, 2, 2)]
+    ```
+
+    - dp테이블을 역순으로 남은 경로를 최소비용으로 완성할 때의 비용으로 가정하고 작성
+
+      ```
+      [[172, -1, -1], [-1, 110, -1], [-1, -1, 156]]
+      [[-1, 148, 138], [159, -1, 73], [146, 70, -1]]
+      [[inf, 13, 13], [89, inf, 89], [99, 99, inf]]
+      ```
+
+  - 바텀업
+
+    ```python
+    for i in range(3):
+    dp[1] = [float('inf'), float('inf'), float('inf')]
+    dp[1][i] = cost[0][i]
+
+    for j in range(2, n + 1):
+        dp[j][R] = cost[j - 1][R] + min(dp[j - 1][G], dp[j - 1][B])
+        dp[j][G] = cost[j - 1][G] + min(dp[j - 1][R], dp[j - 1][B])
+        dp[j][B] = cost[j - 1][B] + min(dp[j - 1][R], dp[j - 1][G])
+
+    dp[n][i] = float('inf')
+    result = min(result, min(dp[n]))
+    ```
+
+    - 참고: RGB거리<http://www.acmicpc.net/problem/1149>
+
+    - 시작 집이 R인 경우와 G, B인 경우를 다 각각 바텀업으로 구한 뒤 가장 작은 결과값을 출력한다.
+
+  - 입력
+
+    ```
+    3
+    26 40 83
+    49 60 57
+    13 89 99
+    ```
+
+  - 출력
+
+    ```
+    110
+    ```
+
+<br>
