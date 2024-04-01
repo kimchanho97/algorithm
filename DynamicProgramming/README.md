@@ -216,7 +216,7 @@ for k in range(i, j)]) + (psum[j] - psum[i - 1])` 의 점화식을 가진다.
     result = min(result, min(dp[n]))
     ```
 
-    - 참고: RGB거리<http://www.acmicpc.net/problem/1149>
+    - 참고: RGB거리<<http://www.acmicpc.net/problem/1149>>
 
     - 시작 집이 R인 경우와 G, B인 경우를 다 각각 바텀업으로 구한 뒤 가장 작은 결과값을 출력한다.
 
