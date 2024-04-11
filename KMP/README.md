@@ -18,11 +18,11 @@
 
   - kmp_table
 
-    값 = 접두사, 접미사가 같아지는 최대길이
+    값 = **접두사, 접미사가 같아지는 최대길이**
 
     <img width="450" alt="스크린샷 2024-04-11 오후 9 09 48" src="https://github.com/kimchanho97/algorithm/assets/104095041/64abcad2-cdda-4fe4-b56a-ac24e66398e2">
 
-    kmp테이블을 구하는 과정에서도 kmp알고리즘을 활용한다.
+    kmp테이블을 구하는 과정에서도 kmp알고리즘을 활용한다.(패턴의 접미사 인덱스를 1부터 시작해서 비교한다.)
 
     ```python
     def kmp_table():
