@@ -95,7 +95,7 @@
 
   - **왜? `n - table[n-1]`값이 반복될 수 있는 가장 작은 문자열의 길이인가??**
 
-    -> 참고: [플래4]광고 <https://www.acmicpc.net/problem/1305>
+    -> 참고: [플래4]광고(https://www.acmicpc.net/problem/1305)
 
   - 입력
 
