@@ -115,3 +115,55 @@
     ```
 
 <br>
+
+## [플래5]바이러스(http://www.acmicpc.net/problem/7575)
+
+- 문제: **n개의 text가 주어졌을 때 길이가 k인 공통된 문자열 찾기**
+
+* 알고리즘: `KMP`
+
+* 해설: 첫번째 입력 문자열을 기준으로 길이가 k인 가능한 pattern을 모두 찾는다. 1부터 n번째 문자열까지 해당 패턴이 존재할 경우 해당 패턴은 공통된 문자열이 되는 것이다. 검사 방법은 kmp알고리즘을 사용한다.
+
+  ```python
+  for i in range(len(program[0]) - k + 1):
+    pattern = program[0][i:i+k]
+    table = [0] * len(pattern)
+
+    flag = True
+    for j in range(1, n):
+        text = program[j]
+        if kmp(text, pattern):
+            continue
+
+        text = program[j][::-1]
+        if kmp(text, pattern):
+            continue
+
+        flag = False
+        break
+
+    if flag:
+        result = True
+        # print(pattern)
+        break
+  ```
+
+  - 입력
+
+    ```
+    3 4
+    13
+    10 8 23 93 21 42 52 22 13 1 2 3 4
+    11
+    1 3 8 9 21 42 52 22 13 41 42
+    10
+    9 21 42 52 13 22 52 42 12 21
+    ```
+
+  - 출력
+
+    ```
+    YES
+    ```
+
+<br>
