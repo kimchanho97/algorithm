@@ -31,8 +31,37 @@
 - 트리 구조
   <img alt="스크린샷 2024-01-09 오후 7 54 16" src="https://github.com/kimchanho97/algorithm/assets/104095041/9d5ff1b9-399c-485e-8f86-0ee57e751985">
 
-  - 각 인덱스 i의 의미: i부터 앞으로 L[i]개의 값의 합
-  - L[i]: 0이 아닌 마지막 비트(내가 저장하고 있는 값들의 개수)
+  - 각 인덱스 i의 의미: i부터 앞으로 `L[i]의 마지막 비트 값`개의 값의 합
+  - `L[i]`의 0이 아닌 마지막 비트: 내가 저장하고 있는 값들의 개수
+
+    ```
+    0101(5) -> 1개
+    0100(4) -> 4개
+    ```
+
+- update
+
+  ```python
+  def update(i, diff):
+    # 3 = 0011
+    # 3 -> 4 -> 8 -> 16(3의 합의 정보를 가지고 있는 항)
+    while i <= n:
+        tree[i] += diff
+        i += (i & -i)
+  ```
+
+- sum
+
+  ```python
+  def prefixSum(i):
+    # 1 부타 i까지의 합을 구함
+    # 1 ~ 7: 7 -> 6(5와6의 합) -> 4(1 ~ 4합)
+    sum = 0
+    while i > 0:
+        sum += tree[i]
+        i -= (i & -i)
+    return sum
+  ```
 
 - 예시
   <img alt="스크린샷 2024-01-09 오후 7 57 59" src="https://github.com/kimchanho97/algorithm/assets/104095041/d4078fd1-b585-466b-bab3-b53efe072e09">
