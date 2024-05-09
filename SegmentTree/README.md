@@ -15,7 +15,7 @@
       num = int(sys.stdin.readline())
       lst.append(num)
 
-  nodeNum = 2 ** (math.ceil(math.log(n, 2))+1)
+  nodeNum = 1 << (math.ceil(math.log(n, 2))+1)
   tree = [0] * nodeNum
   ```
 
