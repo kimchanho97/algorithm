@@ -85,18 +85,18 @@
 
     ```python
     def initTree(node, start, end):
-    if start == end:
-        tree[node] = (lst[start], start)
-        return tree[node]
+      if start == end:
+          tree[node] = (lst[start], start)
+          return tree[node]
 
-    mid = (start + end) // 2
-    left_value, left_index = initTree(node*2, start, mid)
-    right_value, right_index = initTree(node*2+1, mid+1, end)
-    if left_value <= right_value:
-        tree[node] = (left_value, left_index)
-    else:
-        tree[node] = (right_value, right_index)
-    return tree[node]
+      mid = (start + end) // 2
+      left_value, left_index = initTree(node*2, start, mid)
+      right_value, right_index = initTree(node*2+1, mid+1, end)
+      if left_value <= right_value:
+          tree[node] = (left_value, left_index)
+      else:
+          tree[node] = (right_value, right_index)
+      return tree[node]
     ```
 
     모든 leaf node를 방문하기 때문에 Nlon(N)의 시간복잡도를 가진다.
@@ -105,20 +105,20 @@
 
     ```python
     def update(node, start, end, idx, value):
-    if idx < start or idx > end:
-        return tree[node]
-    if start == end:
-        tree[node] = (value, idx)
-        return tree[node]
+      if idx < start or idx > end:
+          return tree[node]
+      if start == end:
+          tree[node] = (value, idx)
+          return tree[node]
 
-    mid = (start + end) // 2
-    left_value, left_index = update(node * 2, start, mid, idx, value)
-    right_value, right_index = update(node * 2 + 1, mid + 1, end, idx, value)
-    if left_value <= right_value:
-        tree[node] = (left_value, left_index)
-    else:
-        tree[node] = (right_value, right_index)
-    return tree[node]
+      mid = (start + end) // 2
+      left_value, left_index = update(node * 2, start, mid, idx, value)
+      right_value, right_index = update(node * 2 + 1, mid + 1, end, idx, value)
+      if left_value <= right_value:
+          tree[node] = (left_value, left_index)
+      else:
+          tree[node] = (right_value, right_index)
+      return tree[node]
     ```
 
     한 번의 leaf node만 방문하므로 log(N)의 시간복잡도를 가진다.
@@ -127,18 +127,18 @@
 
     ```python
     def getMin(node, start, end, left, right):
-    if left <= start and end <= right:
-        return tree[node]
-    if left > end or right < start:
-        return float('inf'), -1
+      if left <= start and end <= right:
+          return tree[node]
+      if left > end or right < start:
+          return float('inf'), -1
 
-    mid = (start + end) // 2
-    left_value, left_index = getMin(node*2, start, mid, left, right)
-    right_value, right_index = getMin(node*2+1, mid+1, end, left, right)
-    if left_value <= right_value:
-        return left_value, left_index
-    else:
-        return right_value, right_index
+      mid = (start + end) // 2
+      left_value, left_index = getMin(node*2, start, mid, left, right)
+      right_value, right_index = getMin(node*2+1, mid+1, end, left, right)
+      if left_value <= right_value:
+          return left_value, left_index
+      else:
+          return right_value, right_index
     ```
 
   * 입력
