@@ -72,3 +72,97 @@
   - **중요!!: 값을 갱신한 이후 리프node의 값을 저장하는 배열 lst역시 갱신해주어야 한다.**
 
 <br>
+
+## [골드2]보석 도둑(http://www.acmicpc.net/problem/1202)
+
+- 문제: 각 가방 안에 한 개의 보석만 넣을 수 있을 때, 훔칠 수 있는 최대 보석의 가격은?
+
+* 알고리즘: `세그먼트 트리`, `최솟값 세그먼트 트리`
+
+* 해설: 가방이 넣을 수 있는 무게 이하의 보석 중 최대의 가격의 보석을 넣어야 한다. 가격순으로 정렬한 뒤 넣을 수 있는 무게의 가방을 찾아서 값을 대입한다. 해당 과정에서 최솟값 세그먼트트리를 통해 위치를 찾는다.
+
+  - initTree
+
+    ```python
+    def initTree(node, start, end):
+    if start == end:
+        tree[node] = (lst[start], start)
+        return tree[node]
+
+    mid = (start + end) // 2
+    left_value, left_index = initTree(node*2, start, mid)
+    right_value, right_index = initTree(node*2+1, mid+1, end)
+    if left_value <= right_value:
+        tree[node] = (left_value, left_index)
+    else:
+        tree[node] = (right_value, right_index)
+    return tree[node]
+    ```
+
+    모든 leaf node를 방문하기 때문에 Nlon(N)의 시간복잡도를 가진다.
+
+  * update
+
+    ```python
+    def update(node, start, end, idx, value):
+    if idx < start or idx > end:
+        return tree[node]
+    if start == end:
+        tree[node] = (value, idx)
+        return tree[node]
+
+    mid = (start + end) // 2
+    left_value, left_index = update(node * 2, start, mid, idx, value)
+    right_value, right_index = update(node * 2 + 1, mid + 1, end, idx, value)
+    if left_value <= right_value:
+        tree[node] = (left_value, left_index)
+    else:
+        tree[node] = (right_value, right_index)
+    return tree[node]
+    ```
+
+    한 번의 leaf node만 방문하므로 log(N)의 시간복잡도를 가진다.
+
+  - getMin
+
+    ```python
+    def getMin(node, start, end, left, right):
+    if left <= start and end <= right:
+        return tree[node]
+    if left > end or right < start:
+        return float('inf'), -1
+
+    mid = (start + end) // 2
+    left_value, left_index = getMin(node*2, start, mid, left, right)
+    right_value, right_index = getMin(node*2+1, mid+1, end, left, right)
+    if left_value <= right_value:
+        return left_value, left_index
+    else:
+        return right_value, right_index
+    ```
+
+  * 입력
+
+    ```
+    9 5
+    4 5
+    4 9
+    4 10
+    8 55
+    14 20
+    9 15
+    8 55
+    8 5
+    11 54
+    10
+    5
+    4
+    15
+    20
+    ```
+
+  * 출력
+
+    ```
+    183
+    ```
