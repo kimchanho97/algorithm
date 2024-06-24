@@ -21,5 +21,7 @@
 - [_PriorityQueue_](https://github.com/kimchanho97/algorithm/tree/main/PriorityQueue)
 - [_SegmentTree_](https://github.com/kimchanho97/algorithm/tree/main/SegmentTree)
 - [_Stack_](https://github.com/kimchanho97/algorithm/tree/main/Stack)
+- [_Sweeping_](https://github.com/kimchanho97/algorithm/tree/main/Sweeping)
 - [_Trie_](https://github.com/kimchanho97/algorithm/tree/main/Trie)
+- [_TwoPointer_](https://github.com/kimchanho97/algorithm/tree/main/TwoPointer)
 - [_UnionFind_](https://github.com/kimchanho97/algorithm/tree/main/UnionFind)
