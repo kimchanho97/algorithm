@@ -1,4 +1,4 @@
-## [골드3]말이 되고픈 원숭이(http://www.acmicpc.net/problem/1900)
+## [골드3]말이 되고픈 원숭이(http://www.acmicpc.net/problem/1600)
 
 - 문제: 체스(말) 이동이 추가된 그래프 탐색
 
