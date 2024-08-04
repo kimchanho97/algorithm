@@ -1,3 +1,45 @@
+## [골드3]세 용액(http://www.acmicpc.net/problem/2473)
+
+- 문제: 수열이 주어졌을 때, 세 수의 합이 0에 가장 가까운 수들의 조합을 찾아라.
+
+* 알고리즘: `투 포인터` or `이분 탐색`
+
+* 해설
+
+  참고: [골드5]두 용액(http://www.acmicpc.net/problem/2470)
+
+  - 투 포인터
+
+    세 수의 합이 0이 되려면 위 문제(두 용액)을 참고해서 두 수의 합이 나머지 수의 음수와 같으면 된다. 기준이 되는 수를 for문으로 반복한 뒤, 반복문 안에서 투포인터 로직을 실행한다.
+
+    ```python
+    for i in range(n):
+    l, r = i+1, n-1
+    center = lst[i]
+    while l < r:
+        # 두개의 합이 -center가 되어야 함
+        curSum = lst[l] + lst[r]
+        if abs(curSum + center) < result:
+            result = abs(curSum + center)
+            answer = [i, l, r]
+
+        if curSum < -center:
+            l += 1
+        elif curSum == -center:
+            break
+        else:
+            r -= 1
+    ```
+
+    l을 i+1로 지정해도 되는 이유는 결국 중첩 반복문을 실행할 때 중복을 제거하려면 내부 반복문의 인덱스가 바깥 반복문의 인덱스보다 커야된다. 만약 `i=2`일 때, `l=0`, `r=5`로 갱신되었다고 하면 이미 `i=0`일 때 갱신되었을 것이다.
+
+  - 이분 탑색
+
+    이중 for문으로 가능한 모든 경우의 수를 구한 뒤 나머지 한 수의 합을 이분탐색으로 구하는 방법
+    O(n^2 logN)으로 위 투포인터 O(n^2)보다 오래 걸리지만 통과한다.
+
+<br>
+
 ## [골드5]두 용액(http://www.acmicpc.net/problem/2470)
 
 - 문제: 수열이 주어졌을 때, 두 수의 합이 0에 가장 가까운 수들의 조합을 찾아라.
