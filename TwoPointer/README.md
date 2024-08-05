@@ -6,7 +6,7 @@
 
 * 해설
 
-  참고: [골드5]두 용액(http://www.acmicpc.net/problem/2470)
+  참고: **[골드5]두 용액(http://www.acmicpc.net/problem/2470)**
 
   - 투 포인터
 
