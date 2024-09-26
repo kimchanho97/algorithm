@@ -36,23 +36,23 @@
 
     ```python
     def topology_sort(indegree, graph):
-    q = deque()
-    for i in range(1, n+1):
-        if indegree[i] == 0:
-            q.append(i)
+        q = deque()
+        for i in range(1, n+1):
+            if indegree[i] == 0:
+                q.append(i)
 
-    result = []
-    for i in range(n):
-        if not q:
-            return [0]
+        result = []
+        for i in range(n):
+            if not q:
+                return [0]
 
-        cur = q.popleft()
-        result.append(cur)
-        for next in graph[cur]:
-            indegree[next] -= 1
-            if indegree[next] == 0:
-                q.append(next)
-    return result
+            cur = q.popleft()
+            result.append(cur)
+            for next in graph[cur]:
+                indegree[next] -= 1
+                if indegree[next] == 0:
+                    q.append(next)
+        return result
     ```
 
     노드 개수만큼만 반복을 수행하며 for문 도중 **큐의 크기가 2이상이라면 가능한 위상 정렬의 결과가 2개 이상이라는 의미**이다.
